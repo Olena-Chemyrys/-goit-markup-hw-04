@@ -56,6 +56,7 @@ ul {
 
 .link {
   text-decoration: none;
+  font-style: normal;
 }
 
 .button {
@@ -104,7 +105,7 @@ ul {
   padding-bottom: 32px;
 }
 
-.header-links .header-link {
+.header-links .header-item {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
@@ -121,13 +122,17 @@ ul {
   align-self: center;
 }
 
-.contact-links .contact-link {
+.contact-links .contact-item {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--primary-text-color);
+  /* color: var(--primary-text-color); */
   padding-top: 32px;
   padding-bottom: 32px;
+}
+
+.contact-links .link {
+  color: var(--primary-text-color);
 }
 
 .contact-links .contact-item:not(:last-child) {
@@ -344,16 +349,16 @@ ul {
   padding-bottom: 60px;
 }
 
+.address .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .footer .logo {
   color: var(--primary-white-color);
   margin-right: 0;
   margin-bottom: 28px;
-}
-
-.address .contact-links {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
 }
 
 .contact-links .a-item {
@@ -363,7 +368,7 @@ ul {
   font-style: normal;
 }
 
-.address .link {
+.address .contact-item {
   color: var(--footer-links-color);
   line-height: 1.7;
   letter-spacing: 0.03em;
