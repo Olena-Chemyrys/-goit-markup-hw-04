@@ -211,13 +211,18 @@ ul {
 .individ {
   padding-bottom: 0;
 }
-.ind-list {
-  width: 270px;
-}
 
 .container .individ-list {
   display: flex;
   align-items: flex-start;
+}
+
+.ind-list {
+  width: 270px;
+}
+
+.ind-list:not(:last-child) {
+  margin-right: 30px;
 }
 
 .individ-title {
@@ -373,4 +378,6 @@ ul {
   line-height: 1.7;
   letter-spacing: 0.03em;
   font-style: normal;
+  padding: 0 auto;
+  gap: 12px;
 }
