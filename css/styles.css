@@ -15,6 +15,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
+  fill: var(--icon-items-color);
 }
 /* reset */
 h1,
@@ -58,6 +59,7 @@ ul {
 .link {
   text-decoration: none;
   font-style: normal;
+  color: var(--icon-items-color);
 }
 
 .button {
@@ -118,28 +120,6 @@ ul {
   margin-right: 50px;
 }
 
-.container > .contact-links {
-  display: flex;
-  align-self: center;
-}
-
-.contact-links .contact-item {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  /* color: var(--primary-text-color); */
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.contact-links .link {
-  color: var(--primary-text-color);
-}
-
-.contact-links .contact-item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .header-links .link {
   color: #212121;
 }
@@ -149,11 +129,44 @@ ul {
   color: var(--accent-color);
 }
 
+.container > .contact-links {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin: 0 auto;
+}
+
+.contact-links .contact-item {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  fill: currentColor;
+  margin: 0;
+}
+
+.contact-links .contact-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-links .link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  fill: currentColor;
+}
+
 .contact-links .link:hover,
 .contact-links .link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
+.contact-links .contact-icon {
+  margin-right: 10px;
+}
 /* Main Section */
 
 .hero {
@@ -248,7 +261,7 @@ ul {
 
 .icon-thumb {
   height: 120px;
-  background-color: var(--icon-items-color);
+  background-color: var(--buttons-background);
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -323,7 +336,7 @@ team-item {
   height: 44px;
   background: #ffffff;
   border-radius: 50%;
-  /* fill: var(--icon-items-color); */
+  fill: currentColor;
 }
 .social-item:not(:last-child) {
   margin-right: 10px;
@@ -334,20 +347,11 @@ team-item {
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: var(--icon-items-color);
 }
 
 .social-list .social-item:hover,
 .social-list .social-item:focus {
   background: var(--accent-color);
-}
-
-.icon-social {
-  fill: var(--icon-items-color);
-}
-
-.social-item .icon-social:hover,
-.social-item .icon-social:focus {
   fill: var(--primary-white-color);
 }
 
@@ -374,22 +378,23 @@ team-item {
 }
 
 .client-link {
-  fill: var(--icon-items-color);
-}
-
-.client-list .client-item:hover {
-  /* .client-item > .client-link:focus { */
-  fill: var(--accent-color);
-}
-/* .client-item .client-link:hover,
-.client-item .client-link:focus {
-  fill: var(--accent-color);
-} */
-
-.client-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
-  fill: var(--icon-items-color);
+  fill: currentColor;
+}
+
+.client-list .client-item:hover,
+.client-list .client-item:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.client-item .client-link:hover,
+.client-item .client-link:focus {
+  fill: var(--accent-color);
 }
 
 /* Portfolio */
@@ -458,18 +463,14 @@ team-item {
   padding-bottom: 60px;
 }
 
-/* .address-contain {
-  margin-right: 70px;
-} */
 .footer-container {
   display: flex;
   align-items: baseline;
 }
 
 .address-contain {
-  margin-right: 70px;
   width: 231px;
-  height: 81px;
+  min-height: 81px;
 }
 
 .address .contact-links {
@@ -521,9 +522,6 @@ team-item {
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* .icon-social {
-  fill: ;
-} */
 .sign-up .icon-social {
   fill: var(--primary-white-color);
 }
