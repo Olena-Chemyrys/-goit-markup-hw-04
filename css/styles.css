@@ -323,7 +323,7 @@ team-item {
   height: 44px;
   background: #ffffff;
   border-radius: 50%;
-  fill: var(--icon-items-color);
+  /* fill: var(--icon-items-color); */
 }
 .social-item:not(:last-child) {
   margin-right: 10px;
@@ -342,9 +342,13 @@ team-item {
   background: var(--accent-color);
 }
 
-.social-item .social-link:hover,
-.social-item .social-link:focus {
-  color: var(--primary-white-color);
+.icon-social {
+  fill: var(--icon-items-color);
+}
+
+.social-item .icon-social:hover,
+.social-item .icon-social:focus {
+  fill: var(--primary-white-color);
 }
 
 /* <!-- clients-section --> */
@@ -354,6 +358,9 @@ team-item {
 }
 
 .client-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-items-color);
@@ -367,12 +374,10 @@ team-item {
 }
 
 .client-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  fill: var(--icon-items-color);
 }
 
-.client-list .client-link:hover {
+.client-list .client-item:hover {
   /* .client-item > .client-link:focus { */
   fill: var(--accent-color);
 }
@@ -386,6 +391,7 @@ team-item {
   height: 100%;
   fill: var(--icon-items-color);
 }
+
 /* Portfolio */
 
 /*  buttons menu*/
@@ -452,6 +458,20 @@ team-item {
   padding-bottom: 60px;
 }
 
+/* .address-contain {
+  margin-right: 70px;
+} */
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.address-contain {
+  margin-right: 70px;
+  width: 231px;
+  height: 81px;
+}
+
 .address .contact-links {
   display: flex;
   flex-direction: column;
@@ -479,4 +499,31 @@ team-item {
   font-style: normal;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/* social-links */
+.sign-up {
+  width: 206px;
+  height: 80px;
+  margin-left: 70px;
+  padding: 0;
+}
+.social-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+
+.social-item {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* .icon-social {
+  fill: ;
+} */
+.sign-up .icon-social {
+  fill: var(--primary-white-color);
 }
